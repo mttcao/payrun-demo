@@ -1,0 +1,24 @@
+{
+  "name": "health_dashboard_2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "@myob/myob-styles": "0.14.5",
+    "@myob/myob-widgets": "0.34.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-superagent": "^1.1.1",
+    "superagent": "^3.5.2",
+    "superagent-bluebird-promise": "^4.2.0"
+  },
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

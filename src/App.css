@@ -1,0 +1,19 @@
+.dashboard {
+    width: 40%;
+    padding: 1%;
+    margin: 1%;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: sans-serif;
+    margin: 2%;
+}
+
+.success {
+    color: limegreen;
+}
+
+.failure {
+    color: red;
+}
