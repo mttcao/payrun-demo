@@ -16,7 +16,6 @@ class PayrunTable extends React.Component {
   payrunData = () => {
     request.get('http://localhost:4000/manage/payruns')
       .then((result) => {
-        console.log(result.body[0].startdate)
         this.setState({
           payruns: result.body
         })
@@ -35,7 +34,7 @@ class PayrunTable extends React.Component {
   }
 
   payrunToRow = (payrun) => {
-    return {id: payrun.id, dateperiod: `${payrun.startdate} to ${payrun.enddate}`, payondate: payrun.payondate};
+    return {id: payrun.id, dateperiod: `${payrun.start_date} to ${payrun.end_date}`, payondate: payrun.pay_on_date};
   };
 
 
