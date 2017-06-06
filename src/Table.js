@@ -1,6 +1,7 @@
 import React from 'react';
 // import './App.css';
 import { Table } from "@myob/myob-widgets";
+// import JsonApi from 'jsonapi-serializer';
 var request = require('superagent-bluebird-promise');
 
 const initialState = {
@@ -34,9 +35,8 @@ class PayrunTable extends React.Component {
   }
 
   payrunToRow = (payrun) => {
-    return {id: payrun.id, dateperiod: `${payrun.start_date} to ${payrun.end_date}`, payondate: payrun.pay_on_date};
+    return {id: payrun.id, dateperiod: `${payrun.data.attributes.startDate} to ${payrun.data.attributes.endDate}`, payondate: payrun.data.attributes.payOnDate};
   };
-
 
   render() {
     const data = this.state.payruns.map(this.payrunToRow);
@@ -52,9 +52,9 @@ class PayrunTable extends React.Component {
         <Table
           data={data}
           columns={columns}
-          onRowSelect={() => {}}
+          // onRowSelect={() => {}}
           width='auto'
-          canSelectMultiple
+          // canSelectMultiple
          />
 
       </div>
